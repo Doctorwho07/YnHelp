@@ -1,6 +1,70 @@
+* {
+  font-family: sans-serif;
+  border: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  font-family: sans-serif;
+}
+
+h5 {
+  letter-spacing: 2px;
+}
+
 .background {
-  position: fixed;
   background-image: url(../assets/background.png);
-  height: 80vh;
+  background-repeat: no-repeat;
+
+  background-size: cover;
   width: 100vw;
+  height: 91vh;
+  top: 10vh;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: #ffffff;
+}
+
+.title {
+  margin-top: 10%;
+}
+
+.presentation {
+  font-size: 1.8em;
+  width: 50vw;
+  align-self: center;
+}
+
+.equipe-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.member {
+  margin: 1%;
+  border-radius: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: rgba(98, 111, 111, 0.64);
+  width: 15vw;
+  text-transform: uppercase;
+}
+
+.member img {
+  width: 10vw;
+  height: 10vw;
+  border-radius: 25px;
+  align-self: center;
+  margin: 1%;
 }

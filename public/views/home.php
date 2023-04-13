@@ -5,6 +5,8 @@
     <title>Title</title>
 </head>
 <body>
+<?php require './public/templates/header.html'; ?>
 
+Ceci est le home
 </body>
 </html>

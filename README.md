@@ -26,8 +26,7 @@ Insert gif or link to demo
 
 
 ## Documentation
-
-[Documentation](https://linktodocumentation)
+Télécharger les fichiers et lancer l'extension golive pour ouvrir notre site web
 
 
 ## Screenshots

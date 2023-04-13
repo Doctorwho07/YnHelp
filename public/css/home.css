@@ -20,17 +20,17 @@ h5 {
 .background {
   background-image: url(../assets/background.png);
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 100%;
+
+  background-size: cover;
+  width: 100vw;
   height: 91vh;
-  position: fixed;
-  top: 9vh;
+  top: 10vh;
   left: 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  color: #ffffff;
 }
 
 .title {

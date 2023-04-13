@@ -36,6 +36,7 @@ a:hover {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
 }
 
 a img {

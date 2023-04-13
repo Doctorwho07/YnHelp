@@ -1,0 +1,6 @@
+.background {
+  position: fixed;
+  background-image: url(../assets/background.png);
+  height: 80vh;
+  width: 100vw;
+}

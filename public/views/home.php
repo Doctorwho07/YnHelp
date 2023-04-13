@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>YnHelp</title>
+    <title>Title</title>
 </head>
 <body>
-<h1>Test</h1>
+<?php require './public/templates/header.html'; ?>
+
+Ceci est le home
 </body>
 </html>

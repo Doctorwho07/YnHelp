@@ -1,16 +1,16 @@
-<?php
+    <?php
 
-class Article
-{
-    private int $id;
-    private string $resume;
-    private string $title;
-    private string $description;
-    private OrganizationType $organization_type;
+    class Article
+    {
+        private int $id;
+        private string $resume;
+        private string $title;
+        private string $description;
+        private OrganizationType $organization_type;
 
-    /**
-     * @return int
-     */
+        /**
+         * @return int
+         */
     public function getId(): int
     {
         return $this->id;

@@ -42,8 +42,8 @@ if (isset($error)) {
           <input type="button" value="Connexion"><br>
 
 
-          <a href="passforget.html">Mot de passe oublié</a><br>
-          <a href="siginusers.html">Incription</a>
+          <a href="/YnHelp/passforget">Mot de passe oublié</a><br>
+          <a href="/YnHelp/siginusers">Incription</a>
         </form>
       
         <div class="drop drop-1"></div>

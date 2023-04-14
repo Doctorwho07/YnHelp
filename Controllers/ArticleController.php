@@ -27,8 +27,8 @@ class ArticleController
     {
         $request = $this->connexion->prepare(
             'SELECT * 
-                    FROM article INNER JOIN organization_type ON article.id_organization_type = organization_type.id
-                    WHERE article.id = :id
+                    FROM article INNER JOIN organization_type ON article.id_organization_type = organization_type.org_id
+                    WHERE article.art_id = :id
                     LIMIT 1');
         $request->bindParam(":id", $id);
         $request->execute();
@@ -42,7 +42,7 @@ class ArticleController
     {
         $request = $this->connexion->prepare(
             'SELECT * 
-                    FROM article INNER JOIN organization_type ON article.id_organization_type = organization_type.id
+                    FROM article INNER JOIN organization_type ON article.id_organization_type = organization_type.org_id
                     WHERE organization_type.label = :organization_name');
         $request->bindParam(":organization_name", $organizationName);
         $request->execute();
@@ -58,7 +58,7 @@ class ArticleController
     private function convertArrayInArticle(array $array): Article
     {
         $article = new Article();
-        $article->setId($array["id"])
+        $article->setId($array["art_id"])
             ->setTitle($array["titre"])
             ->setResume($array["resume"])
             ->setDescription($array["description"])

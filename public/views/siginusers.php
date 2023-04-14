@@ -1,3 +1,53 @@
+<?php
+// Initialiser les variables à vide
+$username = "";
+$email = "";
+$password = "";
+$confirm_password = "";
+
+// Vérifier si le formulaire a été soumis
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+    // Valider les données envoyées
+    $username = trim($_POST["username"]);
+    $email = trim($_POST["email"]);
+    $password = trim($_POST["password"]);
+    $confirm_password = trim($_POST["confirm_password"]);
+
+    // Vérifier si les champs sont remplis
+    if(empty($username)){
+        $username_err = "Veuillez entrer un nom d'utilisateur.";
+    }
+
+    if(empty($email)){
+        $email_err = "Veuillez entrer une adresse email.";
+    }
+
+    if(empty($password)){
+        $password_err = "Veuillez entrer un mot de passe.";
+    }
+
+    if(empty($confirm_password)){
+        $confirm_password_err = "Veuillez confirmer le mot de passe.";
+    }
+
+    // Vérifier si les mots de passe correspondent
+    if($password != $confirm_password){
+        $confirm_password_err = "Les mots de passe ne correspondent pas.";
+    }
+
+    // Si toutes les conditions sont remplies, inscrire l'utilisateur
+    if(empty($username_err) && empty($email_err) && empty($password_err) && empty($confirm_password_err)){
+
+        // Insérer les données dans la base de données
+
+        // Rediriger l'utilisateur vers une page de confirmation
+        header("location: confirmation.php");
+    }
+} ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +56,16 @@
 </head>
 <body>
     <div class="container">
-        <form >
+      <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
           <p>Creer un compte</p>
           <input type="name" placeholder="Prénom"><br>
           <input type="nail" placeholder="Nom"><br>
           <input type="email" placeholder="Email"><br>
           <input type="password" placeholder="Mot de passe"><br>
-          <input type="button" value="Inscription"><br>
+
+
+
+          <input type="submit" value="Inscription"><br>
         </form>
       
         <div class="drop drop-1"></div>

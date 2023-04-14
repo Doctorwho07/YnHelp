@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<?php require './public/templates/header.html'; ?>
+<?php require './public/templates/header.php'; ?>
 
 
 <div style="display: flex; flex-direction: row; margin-top: 200px">

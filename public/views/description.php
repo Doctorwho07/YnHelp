@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./public/css/home.css"/>
 </head>
 <body>
-<?php require './public/templates/header.html'; ?>
+<?php require './public/templates/header.php'; ?>
 
 <div class="article">
     <h1>

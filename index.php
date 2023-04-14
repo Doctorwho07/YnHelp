@@ -14,8 +14,16 @@ if (sizeof($uri_explode) == 1) {
     switch ($uri_explode[1]) {
         case "registred":
             if ($_POST["password"] == $_POST["confirm_password"]) {
-                var_dump($_POST); die();
-                break;
+                $userController->insertUser($_POST["username"], $_POST["password"], $_POST["email"]);
+                $user = $userController->connect($_POST["password"], $_POST["email"]);
+                if (is_null($user)) {
+                    $error = "Une erreur est survenue lors de votre inscription";
+                    include_once './public/views/siginusers.php';
+                } else {
+                    setcookie("YnHelp", $user->getId(), time() + 3600);
+                    include_once './public/views/home.php';
+                    break;
+                }
             }
             $error = "Vos identifiants sont incorrects";
             include_once './public/views/siginusers.php';
@@ -23,11 +31,12 @@ if (sizeof($uri_explode) == 1) {
 
         case "login":
             if ($userController->isConnected()) {
-                die("Vous êtes connecté !");
+                $user = $userController->getUserById($_COOKIE["YnHelp"]);
+                include_once './public/views/user.php';
             } else {
                 include_once './public/views/authusers.php';
-                break;
             }
+            break;
 
         case "passforget":
             include_once './public/views/passforget.php';
@@ -41,8 +50,20 @@ if (sizeof($uri_explode) == 1) {
             include_once './public/views/description.php';
             break;
 
-        case "user" :
-            include_once './public/views/user.php';
+        case "disconnected":
+            setcookie('YnHelp', '', time() - 3600);
+            include_once './public/views/home.php';
+            break;
+
+        case "loged":
+            $user = $userController->connect($_POST["password"], $_POST["email"]);
+            if (is_null($user)) {
+                $error = "Une erreur est survenue lors de votre inscription";
+                include_once './public/views/authusers.php';
+            } else {
+                setcookie("YnHelp", $user->getId(), time() + 3600);
+                include_once './public/views/home.php';
+            }
             break;
 
         case "aids":
@@ -55,10 +76,6 @@ if (sizeof($uri_explode) == 1) {
             }
             $aids = $articleController->getAids();
             include_once "./public/views/aids.php";
-            break;
-
-        case "loged":
-            $userController;
             break;
 
         case "associations":

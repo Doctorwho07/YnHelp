@@ -23,8 +23,8 @@
             <input type="text" placeholder="Email" id="email" name="email" required>
         </div>
         <div>
-            <label for="pasword"></label>
-            <input type="text" placeholder="Password" id="password" name="password" " required>
+            <label for="password"></label>
+            <input type="password" placeholder="Password" id="password" name="password" " required>
         </div>
         <div>
             <label for="confirm_password"></label>
@@ -40,6 +40,13 @@
 
 
 <style>
+    .error {
+        background-color: #CB3434;
+        padding: 10px;
+        border-radius: 15px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
 
     body {
         background: linear-gradient(45deg, #FC466B, #3F5EFB);

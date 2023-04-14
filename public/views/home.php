@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./public/css/header.css"/>
 </head>
 <body>
-<?php require './public/templates/header.html'; ?>
+<?php require './public/templates/header.php'; ?>
 
 <div class="background"></div>
 <div class="container">

@@ -18,7 +18,7 @@
                         <p class="card-description"><?= $aid->getDescription() ?></p>
                     </div>
                     <?php
-        }
+                    }
         ?>
     </div>
 </body>

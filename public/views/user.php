@@ -19,11 +19,9 @@
           <div class="picture"></div>
           <a href="#">Mot de passe oublié</a>
           </div>
-          
           <h3>prenom</h3>
           <h3>nom</h3>
           <h3>email</h3>
-          
         </div>
         <div class="separator"></div>
         <div class="articles"></div>

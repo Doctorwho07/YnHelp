@@ -7,7 +7,7 @@ $uri_explode = explode("/", trim($uri, "/"));
 $articleController = new ArticleController();
 
 if (sizeof($uri_explode) == 1) {
-    include_once './public/views/description.php';
+    include_once './public/views/descriptionaids.php';
 } else {
     switch ($uri_explode[1]) {
         case "login":
@@ -24,7 +24,7 @@ if (sizeof($uri_explode) == 1) {
             if (isset($uri_explode[2])) {
                 if (ctype_digit(strval($uri_explode[2]))) {
                     $aid = $articleController->getArticleById(intval($uri_explode[2]));
-                    include_once "./public/views/aid.php";
+                    include_once "./public/views/descriptionaids.php";
                     break;
                 }
             }

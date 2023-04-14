@@ -1,0 +1,45 @@
+/* cards.css */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+  }
+  
+  .card-image {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card-resume {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .card-description {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .card-organization {
+    font-size: 12px;
+    font-weight: bold;
+    color: #444;
+  }
+  

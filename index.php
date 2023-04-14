@@ -14,6 +14,10 @@ if (sizeof($uri_explode) == 1) {
             include_once './public/views/authusers.html';
             break;
 
+        case "user" :
+            include_once './public/views/user.php';
+            break;
+
         case "aids":
             if (isset($uri_explode[2])) {
                 if (ctype_digit(strval($uri_explode[2]))) {

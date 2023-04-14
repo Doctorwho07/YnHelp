@@ -5,7 +5,7 @@ Welcome to our website dedicated to resources and associations aimed at supporti
 
 - [@Doctorwho07](https://www.github.com/Doctorwho07)
 - [@Lord-forgos](https://www.github.com/Lord-forgos)
-- [@TerminaTorr45](https://www.github.com/octokatherine)
+- [@TerminaTorr45](https://github.com/TerminaTorr45)
 - [@Ozlou](https://www.github.com/Ozlou)
 - [@TerminaTorr45](https://www.github.com/octokatherine)
 - [@ThomasTiraboschi](https://www.github.com/ThomasTiraboschi)

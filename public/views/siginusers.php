@@ -1,47 +1,29 @@
 <?php
-// Initialiser les variables à vide
-$username = "";
-$email = "";
-$password = "";
-$confirm_password = "";
-
-// Vérifier si le formulaire a été soumis
+// Vérifier si le formulaire d'inscription a été soumis
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-
-    // Valider les données envoyées
-    $username = trim($_POST["username"]);
-    $email = trim($_POST["email"]);
-    $password = trim($_POST["password"]);
-    $confirm_password = trim($_POST["confirm_password"]);
-
-    // Vérifier si les champs sont remplis
-    if(empty($username)){
-        $username_err = "Veuillez entrer un nom d'utilisateur.";
+    // Se connecter à la base de données
+    $servername = "localhost";
+    $username = "username";
+    $password = "password";
+    $dbname = "database_name";
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
     }
-
-    if(empty($email)){
-        $email_err = "Veuillez entrer une adresse email.";
+    // Récupérer les données du formulaire
+    $username = $_POST["username"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    // Requête SQL pour insérer les informations de l'utilisateur dans la base de données
+    $sql = "INSERT INTO users (name, email, password) VALUES ('$username', '$email', '$password')";
+    if ($conn->query($sql) === TRUE) {
+    } else {
+        $error = "Erreur lors de l'inscription.";
     }
-
-    if(empty($password)){
-        $password_err = "Veuillez entrer un mot de passe.";
-    }
-
-    if(empty($confirm_password)){
-        $confirm_password_err = "Veuillez confirmer le mot de passe.";
-    }
-
-    // Vérifier si les mots de passe correspondent
-    if($password != $confirm_password){
-        $confirm_password_err = "Les mots de passe ne correspondent pas.";
-    }
-
-    // Si toutes les conditions sont remplies, inscrire l'utilisateur
-    if(empty($username_err) && empty($email_err) && empty($password_err) && empty($confirm_password_err)){
-
-        // Insérer les données dans la base de données
-    }
-} ?>
+    // Fermer la connexion à la base de données
+    $conn->close();
+}
+?>
 
 
 
@@ -57,15 +39,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           <p>Creer un compte</p>
       <div>
         <label for="username"></label>
-        <input type="text" placeholder="Username" id="username" name="username" value="<?php echo $username; ?>" required>
+        <input type="text" placeholder="Username" id="username" name="username" required>
       </div>
       <div>
         <label for="email"></label>
-        <input type="text" placeholder="Email" id="email" name="email" value="<?php echo $email; ?>" required>
+        <input type="text" placeholder="Email" id="email" name="email"  required>
       </div>
       <div>
         <label for="pasword"></label>
-        <input type="text" placeholder="Password" id="password" name="password" value="<?php echo $password; ?>" required>
+        <input type="text" placeholder="Password" id="password" name="password" " required>
       </div>
       <div>
         <label for="confirm_password"></label>

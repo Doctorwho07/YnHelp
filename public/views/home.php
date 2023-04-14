@@ -28,29 +28,40 @@
     </div>
 <div class="equipe-container">
     <div class="member">
-    <img src="./public/assets/alexis.jpeg" alt="alexis">
+    <div class="alexis"></div>
     <h3>Alexis ROUCHES</h3>
     <p>B1 informatique</p>
     </div>
     <div class="member">
-    <img src="./public/assets/chouaib.jpg" alt="chouaib">
+    <div class="chouaib"></div>
+
     <h3>chouaib</h3>
     <p>B1 informatique</p>
     </div>
     <div class="member">
-    <img src="./public/assets/ozlem.jpg" alt="ozlem">
+    <div class="ozlem"></div>
+
     <h3>ozlem</h3>
     <p>B3 cybersécurité</p>
     </div>
     <div class="member">
-    <img src="./public/assets/robin.jpg" alt="robin">
+    <div class="robin"></div>
+
     <h3>robin</h3>
     <p>B3 infra</p>
     </div>
     <div class="member">
-    <img src="./public/assets/ThomasCHAD.png" alt="ThomasCHAD">
+    <div class="thomas"></div>
+
     <h3>Thomas CHAD</h3>
     <p>B2 informatique</p>
+    </div>
+    </div>
+    <div class="member">
+    <div class="johan"></div>
+
+    <h3>johan</h3>
+    <p>B3 dev</p>
     </div>
     </div>
 </section>

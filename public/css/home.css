@@ -17,6 +17,10 @@ body {
   text-align: center;
 }
 
+h1 {
+  margin: 10px;
+}
+
 h3 {
   font-size: 1.2em;
 }
@@ -88,4 +92,33 @@ h5 {
   border-radius: 25px;
   align-self: center;
   margin: 1%;
+}
+
+.alexis {
+  background-image: url(../assets/background.png);
+}
+.thomas {
+  background-image: url(../assets/ThomasCHAD.png);
+}
+.ozlem {
+  background-image: url(../assets/ozlem.jpg);
+}
+.johan {
+  background-image: url(../assets/johan.png);
+}
+.chouaib {
+  background-image: url(../assets/chouaib.jpg);
+}
+.robin {
+  background-image: url(../assets/robin.jpg);
+}
+
+.alexis,
+.thomas,
+.ozlem,
+.johan,
+.chouaib,
+.robin {
+  background-repeat: no-repeat;
+  background-size: cover;
 }

@@ -16,6 +16,12 @@
                             <h3 class="card-title"><?= $aid->getTitle() ?></h3>
                             <p class="card-resume"><?= $aid->getResume() ?></p>
                             <p class="card-description"><?= $aid->getDescription() ?></p>
+                            <div class="card-image-container">
+                        <?php   
+                            $pictureName = $aid->getPictureName() == "" ? "./public/assets/default-user.jpg" : $aid->getPictureName() 
+                        ?>
+                            <img class="card-picture" src="./public/assets/<?= $pictureName ?>" alt="Image de l'article">
+                            </div>
                         </div>
                     </a>
                     <?php

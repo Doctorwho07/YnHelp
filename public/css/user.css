@@ -1,0 +1,48 @@
+.window {
+  margin-top: 11vh;
+  background-color: rgba(0, 0, 0, 0.49);
+  height: 83vh;
+  width: 90vw;
+  margin-bottom: 3vh;
+  border-radius: 40px;
+}
+
+.container {
+  height: 95vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.picture {
+  border-radius: 50px;
+  height: 15vw;
+  width: 15vw;
+  background-color: aqua;
+  border: 100px;
+  margin-bottom: 5%;
+}
+
+.userinfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10vh;
+}
+
+.separator {
+  height: 5px;
+  margin: 5% auto;
+  background-color: #f0f0f0;
+  width: 90vw;
+}
+
+.abc a {
+  color: #fff;
+}
+
+.abc a:hover {
+  letter-spacing: 0;
+}

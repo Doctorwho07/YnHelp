@@ -22,8 +22,7 @@ if (sizeof($uri_explode) == 1) {
             if (isset($uri_explode[2])) {
                 if (ctype_digit(strval($uri_explode[2]))) {
                     $aid = $articleController->getArticleById(intval($uri_explode[2]));
-                    die("Page de chouaib");
-                    include_once "./public/views/aid.php";
+                    include_once "./public/views/aids.php";
                     break;
                 }
             }

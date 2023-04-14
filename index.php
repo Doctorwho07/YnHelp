@@ -16,6 +16,8 @@ if (sizeof($uri_explode) == 1) {
 
         case "description":
             include_once './public/views/description.php';
+            break;
+
         case "user" :
             include_once './public/views/user.php';
             break;

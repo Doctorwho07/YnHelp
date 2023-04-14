@@ -11,8 +11,8 @@
         <?php
             foreach ($aids as $aid) {
                     ?>
-                    <a class="test" href="YnHelp/aids/"> 
                         <div class="card">
+                            <a href="/YnHelp/aids/<?= $aid->getId() ?>">
                             <h3 class="card-title"><?= $aid->getTitle() ?></h3>
                             <p class="card-resume"><?= $aid->getResume() ?></p>
                             <p class="card-description"><?= $aid->getDescription() ?></p>

@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
   }
   
 body {
@@ -20,23 +21,25 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: rgb(104, 104, 104);
-  padding: 1rem;
-  max-width: 200%; /* Ajustez cette valeur pour modifier la largeur du carré noir */
-  max-height: 200%; /* Ajustez cette valeur pour modifier la hauteur du carré noir */
-  overflow: auto; /* Permet de faire défiler le contenu si nécessaire */
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(182, 177, 177, 0.8); /* Ajoutez l'opacité ici */
+    padding: 1rem;
+    max-width: 200%; /* Ajustez cette valeur pour modifier la largeur du carré noir */
+    max-height: 200%; /* Ajustez cette valeur pour modifier la hauteur du carré noir */
+    overflow: auto; /* Permet de faire défiler le contenu si nécessaire */
+  }
+  
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 1rem;
-  padding: 1rem;
-  width: calc(33% - 2rem); /* Ajustez cette valeur pour modifier le nombre de colonnes */
-  background-color: white;
-}
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 1rem;
+    padding: 1rem;
+    width: calc(50% - 2rem); /* Ajustez cette valeur pour modifier la largeur des cartes */
+    min-height: 300px; /* Ajustez cette valeur pour modifier la hauteur minimale des cartes */
+    background-color: white;
+  }
 
   
   

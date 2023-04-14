@@ -1,16 +1,18 @@
-    <?php
+<?php
 
-    class Article
-    {
-        private int $id;
-        private string $resume;
-        private string $title;
-        private string $description;
-        private OrganizationType $organization_type;
+class Article
+{
+    private int $id;
+    private string $resume;
+    private string $title;
+    private string $description;
+    private OrganizationType $organization_type;
+    private string $pictureName;
+    private string $source;
 
-        /**
-         * @return int
-         */
+    /**
+     * @return int
+     */
     public function getId(): int
     {
         return $this->id;
@@ -95,6 +97,43 @@
     public function setOrganizationType(OrganizationType $organization_type): Article
     {
         $this->organization_type = $organization_type;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPictureName(): string
+    {
+        return $this->pictureName;
+    }
+
+    /**
+     * @param $pictureName
+     * @return Article
+     */
+    public function setPictureName($pictureName): Article
+    {
+        $pictureName = is_null($pictureName) ? "" : $pictureName;
+        $this->pictureName = $pictureName;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSource(): string
+    {
+        return $this->source;
+    }
+
+    /**
+     * @param string $source
+     * @return Article
+     */
+    public function setSource(string $source): Article
+    {
+        $this->source = $source;
         return $this;
     }
 }

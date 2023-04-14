@@ -1,0 +1,107 @@
+@font-face {
+    font-family: "quantum";
+    src: url("../assets/quantum-webfont.woff2") format("woff2");
+  }
+
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(182, 177, 177, 0.8); /* Ajoutez l'opacité ici */
+    padding: 1rem;
+    max-width: 200%; /* Ajustez cette valeur pour modifier la largeur du carré noir */
+    max-height: 200%; /* Ajustez cette valeur pour modifier la hauteur du carré noir */
+    overflow: auto; /* Permet de faire défiler le contenu si nécessaire */
+  }
+  
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 1rem;
+    padding: 1rem;
+    width: calc(50% - 2rem); /* Ajustez cette valeur pour modifier la largeur des cartes */
+    min-height: 300px; /* Ajustez cette valeur pour modifier la hauteur minimale des cartes */
+    background-color: white;
+  }
+
+  
+  
+  .card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Modifie l'ombre de la boîte lors du survol */
+    transform: translateY(-5px); /* Fait se soulever légèrement la carte lors du survol */
+  }
+  
+  .card h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .card-title {
+    font-family: "quantum";
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    text-decoration: underline; /* Ajoute un soulignement au titre */
+  }
+  
+  .card-resume {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .card-description {
+    font-size: 14px;
+    color: #333;
+    text-align: justify;
+    font-style: italic; /* Met la description en italique */
+  }
+
+  .card-image-container {
+    width: 100%; /* La largeur du conteneur est définie à 100% de la largeur de la carte */
+    height: 0; /* La hauteur du conteneur est définie à 0 pour utiliser le padding-bottom pour définir la hauteur */
+    padding-bottom: 56.25%; /* Utilisez le padding-bottom pour définir la hauteur du conteneur en pourcentage de la largeur (16:9) */
+    position: relative; /* La position est définie sur relative pour positionner l'image à l'intérieur du conteneur */
+    overflow: hidden; /* Cache tout contenu qui dépasse les limites du conteneur */
+  }
+  
+  .card-picture {
+    position: absolute; /* La position est définie sur absolute pour positionner l'image à l'intérieur du conteneur */
+    top: 0;
+    left: 0;
+    width: 100%; /* La largeur de l'image est définie à 100% de la largeur du conteneur */
+    height: 100%; /* La hauteur de l'image est définie à 100% de la hauteur du conteneur */
+    object-fit: cover; /* Ajuste l'image pour couvrir l'espace disponible tout en maintenant le ratio hauteur/largeur */
+  }
+  
+
+
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .card {
+      width: 100%;
+    }
+  }
+  

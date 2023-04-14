@@ -129,16 +129,3 @@ span {
   border-radius: 50%;
   margin: 2%;
 }
-
-.footer {
-  width: 100%;
-  height: 5vh;
-  background: #00000079;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-p {
-  color: #ffffff;
-}

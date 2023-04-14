@@ -1,12 +1,12 @@
 * {
-  font-family: Montserrat, sans-serif;
+  font-family: "quantum", sans-serif;
   border: 0;
   padding: 0;
 }
 
 @font-face {
   font-family: "quantum";
-  src: url("./public/assets/Quantum.ttf") format("truetype");
+  src: url("../assets/Quantum.ttf");
 }
 
 html {

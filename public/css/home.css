@@ -1,36 +1,69 @@
+@font-face {
+  font-family: "quantum";
+  src: url("../assets/quantum-webfont.woff2") format("woff2");
+}
+
 * {
-  font-family: Montserrat, sans-serif;
   border: 0;
   padding: 0;
+  font-family: sans-serif;
 }
 
 html {
   height: 100%;
   width: 100%;
 }
+body {
+  text-align: center;
+}
 
 h1 {
-  font-family: sans-serif;
+  margin: 10px;
+  font-size: 2em;
+  color: #ffffff;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+h1,
+h3,
+a {
+  font-family: "quantum", sans-serif;
 }
 
 h5 {
   letter-spacing: 2px;
 }
 
+span {
+  font-family: "quantum", sans-serif;
+  font-size: 3em;
+  color: #00bafb;
+}
+
 .background {
   background-image: url(../assets/background.png);
   background-repeat: no-repeat;
-  background-size: cover; /* Ajouté pour adapter l'image à la taille de la page */
-  background-position: center; /* Ajouté pour centrer l'image */
+  background-size: cover;
+  position: fixed;
   width: 100vw;
   height: 100vh;
-  top: 10vh;
+  left: 0;
+  z-index: -10;
+}
+
+.container {
+  width: 99vw;
+  height: 100vh;
   left: 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
   color: #ffffff;
+  z-index: 10;
 }
 
 .title {
@@ -56,15 +89,56 @@ h5 {
   display: flex;
   flex-direction: column;
   align-content: center;
-  background-color: rgba(98, 111, 111, 0.64);
-  width: 15vw;
+  background-color: #8562f9;
+  width: 19vw;
   text-transform: uppercase;
+  align-items: center;
+  padding: 2%;
 }
 
-.member img {
-  width: 10vw;
-  height: 10vw;
-  border-radius: 25px;
-  align-self: center;
-  margin: 1%;
+.alexis {
+  background-image: url(../assets/alexis.jpeg);
+}
+.thomas {
+  background-image: url(../assets/ThomasCHAD.png);
+}
+.ozlem {
+  background-image: url(../assets/ozlem.jpg);
+}
+.johan {
+  background-image: url(../assets/johan.jpg);
+}
+.chouaib {
+  background-image: url(../assets/chouaib.jpg);
+}
+.robin {
+  background-image: url(../assets/robin.jpg);
+}
+
+.alexis,
+.thomas,
+.ozlem,
+.johan,
+.chouaib,
+.robin {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 25vh;
+  height: 25vh;
+  background-position: center;
+  border-radius: 50%;
+  margin: 2%;
+}
+
+.footer {
+  width: 100%;
+  height: 5vh;
+  background: #00000079;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+p {
+  color: #ffffff;
 }

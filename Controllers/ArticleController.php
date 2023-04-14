@@ -33,13 +33,7 @@ class ArticleController
         $request->bindParam(":id", $id);
         $request->execute();
         $result = $request->fetch(PDO::FETCH_ASSOC);
-
-<<<<<<< HEAD
-        $output = $this->convertArrayInArticle($result);
-        return $output;
-=======
         return $this->convertArrayInArticle($result);
->>>>>>> chouaib
     }
 
     private function getArticlesByOrganizationName(string $organizationName)

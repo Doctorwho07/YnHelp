@@ -11,7 +11,9 @@ if (sizeof($uri_explode) == 1) {
 } else {
     switch ($uri_explode[1]) {
         case "login":
-            include_once './public/views/authusers.html';
+
+
+            include_once './public/views/authusers.php';
             break;
 
         case "user" :

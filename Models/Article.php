@@ -8,6 +8,7 @@ class Article
     private string $description;
     private OrganizationType $organization_type;
     private string $pictureName;
+    private string $source;
 
     /**
      * @return int
@@ -115,6 +116,24 @@ class Article
     {
         $pictureName = is_null($pictureName) ? "" : $pictureName;
         $this->pictureName = $pictureName;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSource(): string
+    {
+        return $this->source;
+    }
+
+    /**
+     * @param string $source
+     * @return Article
+     */
+    public function setSource(string $source): Article
+    {
+        $this->source = $source;
         return $this;
     }
 }

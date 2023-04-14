@@ -34,7 +34,7 @@ class ArticleController
         $request->execute();
         $result = $request->fetch(PDO::FETCH_ASSOC);
 
-        $output[] = $this->convertArrayInArticle($result);
+        $output = $this->convertArrayInArticle($result);
         return $output;
     }
 
@@ -63,7 +63,8 @@ class ArticleController
             ->setResume($array["resume"])
             ->setDescription($array["description"])
             ->setOrganizationType($this->convertArrayInOrganizationType($array))
-            ->setPictureName($array["picture_name"]);
+            ->setPictureName($array["picture_name"])
+            ->setSource($array["source"]);
         return $article;
     }
 

@@ -11,7 +11,6 @@ if (isset($_POST['submit'])) {
 
     if ($username === 'utilisateur' && $password === 'motdepasse') {
         $_SESSION['loggedin'] = true;
-        header('Location: page-protegee.php');
         exit;
     } else {
         $error = 'Nom d\'utilisateur ou mot de passe incorrect';
@@ -34,12 +33,17 @@ if (isset($error)) {
 } ?>
 
 
-        <form >
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
           <p>Bienvenue</p>
-
-          <input type="email" placeholder="Email"><br>
-          <input type="password" placeholder="Mot de passe"><br>
-          <input type="button" value="Connexion"><br>
+          <div>
+            <input type="email" placeholder="Email" id="email" name="email" required><br>
+          </div>
+          <div>
+            <input type="password" placeholder="Password" id="password" name="password" required ><br>
+          </div>
+          
+          
+          <input type="submit" value="Connexion"><br>
 
 
           <a href="/YnHelp/passforget">Mot de passe oublié</a><br>

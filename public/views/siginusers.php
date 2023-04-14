@@ -40,9 +40,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($username_err) && empty($email_err) && empty($password_err) && empty($confirm_password_err)){
 
         // Insérer les données dans la base de données
-
-        // Rediriger l'utilisateur vers une page de confirmation
-        header("location: confirmation.php");
     }
 } ?>
 

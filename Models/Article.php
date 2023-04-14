@@ -7,6 +7,7 @@ class Article
     private string $title;
     private string $description;
     private OrganizationType $organization_type;
+    private string $pictureName;
 
     /**
      * @return int
@@ -95,6 +96,25 @@ class Article
     public function setOrganizationType(OrganizationType $organization_type): Article
     {
         $this->organization_type = $organization_type;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPictureName(): string
+    {
+        return $this->pictureName;
+    }
+
+    /**
+     * @param $pictureName
+     * @return Article
+     */
+    public function setPictureName($pictureName): Article
+    {
+        $pictureName = is_null($pictureName) ? "" : $pictureName;
+        $this->pictureName = $pictureName;
         return $this;
     }
 }

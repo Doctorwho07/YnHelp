@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "quantum";
-  src: url(./public/assets/Quantum.ttf) format("truetype");
+  src: url("../public/assets/Quantum.ttf") format("truetype");
 }
 
 html {

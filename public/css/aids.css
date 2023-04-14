@@ -1,28 +1,84 @@
+@font-face {
+    font-family: "quantum";
+    src: url("../assets/quantum-webfont.woff2") format("woff2");
+  }
+
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgb(104, 104, 104);
+  padding: 1rem;
+  max-width: 200%; /* Ajustez cette valeur pour modifier la largeur du carré noir */
+  max-height: 200%; /* Ajustez cette valeur pour modifier la hauteur du carré noir */
+  overflow: auto; /* Permet de faire défiler le contenu si nécessaire */
+}
+
 .card {
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+  padding: 1rem;
+  width: calc(33% - 2rem); /* Ajustez cette valeur pour modifier le nombre de colonnes */
+  background-color: white;
 }
 
-.card-title {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.card-resume {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.card-description {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.card-organization_type {
-  font-size: 14px;
-  font-weight: bold;
-  color: #6c757d;
-}
+  
+  
+  .card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Modifie l'ombre de la boîte lors du survol */
+    transform: translateY(-5px); /* Fait se soulever légèrement la carte lors du survol */
+  }
+  
+  .card h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .card-title {
+    font-family: "quantum";
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    text-decoration: underline; /* Ajoute un soulignement au titre */
+  }
+  
+  .card-resume {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .card-description {
+    font-size: 14px;
+    color: #333;
+    text-align: justify;
+    font-style: italic; /* Met la description en italique */
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .card {
+      width: 100%;
+    }
+  }
+  

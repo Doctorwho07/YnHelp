@@ -1,32 +1,3 @@
-<?php
-// Vérifier si le formulaire d'inscription a été soumis
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    // Se connecter à la base de données
-    $servername = "localhost";
-    $username = "username";
-    $password = "password";
-    $dbname = "database_name";
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-    // Récupérer les données du formulaire
-    $username = $_POST["username"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    // Requête SQL pour insérer les informations de l'utilisateur dans la base de données
-    $sql = "INSERT INTO users (name, email, password) VALUES ('$username', '$email', '$password')";
-    if ($conn->query($sql) === TRUE) {
-    } else {
-        $error = "Erreur lors de l'inscription.";
-    }
-    // Fermer la connexion à la base de données
-    $conn->close();
-}
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,170 +5,180 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <title>SiginUser</title>
 </head>
 <body>
-    <div class="container">
-      <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-          <p>Creer un compte</p>
-      <div>
-        <label for="username"></label>
-        <input type="text" placeholder="Username" id="username" name="username" required>
-      </div>
-      <div>
-        <label for="email"></label>
-        <input type="text" placeholder="Email" id="email" name="email"  required>
-      </div>
-      <div>
-        <label for="pasword"></label>
-        <input type="text" placeholder="Password" id="password" name="password" " required>
-      </div>
-      <div>
-        <label for="confirm_password"></label>
-        <input type="password" placeholder="Confirm Password" id="confirm_password" name="confirm_password" required>
-    </div>
+<div class="container">
+    <?php if (isset($error)) { ?>
+        <div class="error">
+            <?= $error ?>
+        </div>
+    <?php } ?>
+
+    <form method="post" action="/YnHelp/registred">
+        <p>Creer un compte</p>
+        <div>
+            <label for="username"></label>
+            <input type="text" placeholder="Username" id="username" name="username" required>
+        </div>
+        <div>
+            <label for="email"></label>
+            <input type="text" placeholder="Email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="pasword"></label>
+            <input type="text" placeholder="Password" id="password" name="password" " required>
+        </div>
+        <div>
+            <label for="confirm_password"></label>
+            <input type="password" placeholder="Confirm Password" id="confirm_password" name="confirm_password"
+                   required>
+        </div>
 
 
-
-          <input type="submit" value="Inscription"><br>
-        </form>
-      
-        <div class="drop drop-1"></div>
-        <div class="drop drop-2"></div>
-        <div class="drop drop-3"></div>
-        <div class="drop drop-4"></div>
-        <div class="drop drop-5"></div>
-      </div>
+        <input type="submit" value="Inscription"><br>
+    </form>
+</div>
 </body>
+
 
 <style>
 
-body {
-    background: linear-gradient(45deg, #FC466B, #3F5EFB);
-    height: 100vh;
-    font-family: arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .container {
-    position: relative;
-  }
+    body {
+        background: linear-gradient(45deg, #FC466B, #3F5EFB);
+        height: 100vh;
+        font-family: arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        position: relative;
+    }
 
 
-  form {
-    background: rgba(255, 255, 255, .3);
-    padding: 3rem;
-    height: 450px;
-    border-radius: 20px;
-    border-left: 1px solid rgba(255, 255, 255, .3);
-    border-top: 1px solid rgba(255, 255, 255, .3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    -moz-backdrop-filter: blur(10px);
-    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, .2);
-    text-align: center;
-  }
+    form {
+        background: rgba(255, 255, 255, .3);
+        padding: 3rem;
+        height: 450px;
+        border-radius: 20px;
+        border-left: 1px solid rgba(255, 255, 255, .3);
+        border-top: 1px solid rgba(255, 255, 255, .3);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        -moz-backdrop-filter: blur(10px);
+        box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, .2);
+        text-align: center;
+    }
 
-  p {
-    color: white;
-    font-weight: 500;
-    opacity: .7;
-    font-size: 1.4rem;
-    margin-bottom: 60px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
-  }
-    
-  a {
-    text-decoration: none;
-    color: #ddd;
-    font-size: 12px;
-  }
-  
-  a:hover {
-    text-shadow: 2px 2px 6px #00000040;
-  }
-  
-  a:active {
-    text-shadow: none;
-  }
+    p {
+        color: white;
+        font-weight: 500;
+        opacity: .7;
+        font-size: 1.4rem;
+        margin-bottom: 60px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    }
+
+    a {
+        text-decoration: none;
+        color: #ddd;
+        font-size: 12px;
+    }
+
+    a:hover {
+        text-shadow: 2px 2px 6px #00000040;
+    }
+
+    a:active {
+        text-shadow: none;
+    }
 
 
+    input {
+        background: transparent;
+        border: none;
+        border-left: 1px solid rgba(255, 255, 255, .3);
+        border-top: 1px solid rgba(255, 255, 255, .3);
+        padding: 1rem;
+        width: 200px;
+        border-radius: 50px;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        -moz-backdrop-filter: blur(5px);
+        box-shadow: 4px 4px 60px rgba(0, 0, 0, .2);
+        color: white;
+        font-weight: 500;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+        transition: all .3s;
+        margin-bottom: 2em;
+    }
 
-  input {
-    background: transparent;
-    border: none;
-    border-left: 1px solid rgba(255, 255, 255, .3);
-    border-top: 1px solid rgba(255, 255, 255, .3);
-    padding: 1rem;
-    width: 200px;
-    border-radius: 50px;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    -moz-backdrop-filter: blur(5px);
-    box-shadow: 4px 4px 60px rgba(0, 0, 0, .2);
-    color: white;
-    font-weight: 500;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
-    transition: all .3s;
-    margin-bottom: 2em;
-  }
+    input:hover,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+    }
 
-  input:hover,
-  input[type="email"]:focus,
-  input[type="password"]:focus{
-    background: rgba(255,255,255,0.1);
-    box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
-  }
-      
-  input[type="button"] {
-    margin-top: 10px;
-    width: 150px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  ::placeholder {
-    color: #fff;
-  }
+    input[type="button"] {
+        margin-top: 10px;
+        width: 150px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
 
-.drop {
-    background: rgba(255, 255, 255, .3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 10px;
-    border-left: 1px solid rgba(255, 255, 255, .3);
-    border-top: 1px solid rgba(255, 255, 255, .3);
-    box-shadow: 10px 10px 60px -8px rgba(0,0,0,0.2);
-    position: absolute;
-    transition: all 0.2s ease;
-  }
+    ::placeholder {
+        color: #fff;
+    }
 
-  .drop-1 {
-    height: 80px; width: 80px;
-    top: -20px; left: -40px;
-    z-index: -1;
-  }
-  
-  .drop-2 {
-    height: 80px; width: 80px;
-    bottom: -30px; right: -10px;
-  }
-  
-  .drop-3 {
-    height: 100px; width: 100px;
-    bottom: 120px; right: -50px;
-    z-index: -1;
-  }
-  
-  .drop-4 {
-    height: 120px; width: 120px;
-    top: -60px; right: -60px;
-  }
-  
-  .drop-5 {
-    height: 60px; width: 60px;
-    bottom: 170px; left: 90px;
-    z-index: -1;
-  }
+    .drop {
+        background: rgba(255, 255, 255, .3);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 10px;
+        border-left: 1px solid rgba(255, 255, 255, .3);
+        border-top: 1px solid rgba(255, 255, 255, .3);
+        box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        transition: all 0.2s ease;
+    }
+
+    .drop-1 {
+        height: 80px;
+        width: 80px;
+        top: -20px;
+        left: -40px;
+        z-index: -1;
+    }
+
+    .drop-2 {
+        height: 80px;
+        width: 80px;
+        bottom: -30px;
+        right: -10px;
+    }
+
+    .drop-3 {
+        height: 100px;
+        width: 100px;
+        bottom: 120px;
+        right: -50px;
+        z-index: -1;
+    }
+
+    .drop-4 {
+        height: 120px;
+        width: 120px;
+        top: -60px;
+        right: -60px;
+    }
+
+    .drop-5 {
+        height: 60px;
+        width: 60px;
+        bottom: 170px;
+        left: 90px;
+        z-index: -1;
+    }
 </style>
 </html>
 

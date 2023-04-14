@@ -1,39 +1,3 @@
-<?php
-session_start();
-// Vérifier si l'utilisateur est déjà connecté
-if(isset($_SESSION["user_id"])){
-    header("Location: index.php");
-}
-// Vérifier si le formulaire de connexion a été soumis
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    // Se connecter à la base de données
-    $servername = "localhost";
-    $username = "username";
-    $password = "password";
-    $dbname = "database_name";
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-    // Récupérer les données du formulaire
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    // Requête SQL pour vérifier si l'utilisateur existe dans la base de données
-    $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
-    $result = $conn->query($sql);
-    if($result->num_rows == 1){
-        // Récupérer les informations de l'utilisateur
-        $row = $result->fetch_assoc();
-        $_SESSION["user_id"] = $row["id"];
-        $_SESSION["user_name"] = $row["username"];
-    }else{
-        $error = "L'adresse e-mail ou le mot de passe est incorrect.";
-    }
-    // Fermer la connexion à la base de données
-    $conn->close();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,7 +13,7 @@ if (isset($error)) {
 } ?>
 
 
-        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <form method="post" action="/YnHelp/loged">
           <p>Bienvenue</p>
           <div>
             <input type="email" placeholder="Email" id="email" name="email" required><br>

@@ -22,7 +22,7 @@ class ArticleController
     {
         $request = $this->connexion->prepare(
             'SELECT * 
-                    FROM article INNER JOIN organization_type ON article.id_organization_type = organization_type.id
+                    FROM article INNER JOIN organization_type ON article.id_organization_type = organization_type.org_id
                     WHERE organization_type.label = :organization_name');
         $request->bindParam(":organization_name", $organizationName);
         $request->execute();

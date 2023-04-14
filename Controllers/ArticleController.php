@@ -18,6 +18,26 @@ class ArticleController
         return $this->getArticlesByOrganizationName("aides");
     }
 
+    public function getAssociations()
+    {
+        return $this->getArticlesByOrganizationName("associations");
+    }
+
+    public function getArticleById(int $id)
+    {
+        $request = $this->connexion->prepare(
+            'SELECT * 
+                    FROM article INNER JOIN organization_type ON article.id_organization_type = organization_type.id
+                    WHERE article.id = :id
+                    LIMIT 1');
+        $request->bindParam(":id", $id);
+        $request->execute();
+        $result = $request->fetch(PDO::FETCH_ASSOC);
+
+        $output[] = $this->convertArrayInArticle($result);
+        return $output;
+    }
+
     private function getArticlesByOrganizationName(string $organizationName)
     {
         $request = $this->connexion->prepare(
@@ -30,7 +50,7 @@ class ArticleController
 
         $output = array();
         foreach ($results as $result) {
-            $output = $this->convertArrayInArticle($result);
+            $output[] = $this->convertArrayInArticle($result);
         }
         return $output;
     }
@@ -46,7 +66,7 @@ class ArticleController
         return $article;
     }
 
-    public function convertArrayInOrganizationType(array $array): OrganizationType
+    private function convertArrayInOrganizationType(array $array): OrganizationType
     {
         $organizationType = new OrganizationType();
         $organizationType->setId($array["id_organization_type"])

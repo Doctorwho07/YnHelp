@@ -12,6 +12,10 @@
 <?php require './public/templates/header.html'; ?>
 
 <div class="background">
+</div>
+<div class="container">
+    
+
     <div class="title">
     <h1>YnHelp</h1>
     </div>
@@ -48,7 +52,7 @@
     <h3>Thomas CHAD</h3>
     <p>B2 informatique</p>
     </div>
-</div>
+    </div>
 </section>
 
 </body>

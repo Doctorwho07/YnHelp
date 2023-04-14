@@ -22,7 +22,7 @@ if (sizeof($uri_explode) == 1) {
             if (isset($uri_explode[2])) {
                 if (ctype_digit(strval($uri_explode[2]))) {
                     $aid = $articleController->getArticleById(intval($uri_explode[2]));
-                    include_once "./public/views/aids.php";
+                    include_once "./public/views/descriptionaids.php";
                     break;
                 }
             }

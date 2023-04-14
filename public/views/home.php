@@ -59,8 +59,6 @@
     </div>
     </div>
 </section>
-
->>>>>>> 28fcc8259340b0d6e67454204edd72aab13ceefc
 </body>
 <?php require './public/templates/footer.html'; ?>
 </html>

@@ -5,8 +5,8 @@
 }
 
 @font-face {
-  font-family: "Foundation";
-  src: url("./public/assets/Quantum.ttf");
+  font-family: "quantum";
+  src: url(./public/assets/Quantum.ttf) format("truetype");
 }
 
 html {
@@ -18,7 +18,7 @@ body {
 }
 
 h1 {
-  font-family: "Foundation", sans-serif;
+  font-family: "quantum", sans-serif;
 }
 
 h5 {

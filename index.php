@@ -27,7 +27,6 @@ if (sizeof($uri_explode) == 1) {
                 }
             }
             $aids = $articleController->getAids(); var_dump($aids);
-            die("aids page");
             include_once "./public/views/aids.php";
             break;
 

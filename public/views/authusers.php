@@ -1,3 +1,24 @@
+<?php
+session_start();
+
+if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Vérifiez les informations d'identification dans votre base de données et autorisez l'accès si elles sont correctes
+    // Si les informations d'identification sont incorrectes, affichez un message d'erreur
+    // Si les informations d'identification sont correctes, redirigez l'utilisateur vers une page protégée par mot de passe
+
+    if ($username === 'utilisateur' && $password === 'motdepasse') {
+        $_SESSION['loggedin'] = true;
+        header('Location: page-protegee.php');
+        exit;
+    } else {
+        $error = 'Nom d\'utilisateur ou mot de passe incorrect';
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +27,21 @@
 </head>
 <body>
     <div class="container">
+
+<?php 
+if (isset($error)) {
+            echo "<p>$error</p>";
+} ?>
+
+
         <form >
           <p>Bienvenue</p>
 
           <input type="email" placeholder="Email"><br>
           <input type="password" placeholder="Mot de passe"><br>
           <input type="button" value="Connexion"><br>
+
+
           <a href="passforget.html">Mot de passe oublié</a><br>
           <a href="siginusers.html">Incription</a>
         </form>

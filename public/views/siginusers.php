@@ -55,9 +55,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="container">
       <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
           <p>Creer un compte</p>
-          <input type="username" placeholder="UserName"><br>
-          <input type="email" placeholder="Email"><br>
-          <input type="password" placeholder="Mot de passe"><br>
+      <div>
+        <label for="username"></label>
+        <input type="text" placeholder="Username" id="username" name="username" value="<?php echo $username; ?>" required>
+      </div>
+      <div>
+        <label for="email"></label>
+        <input type="text" placeholder="Email" id="email" name="email" value="<?php echo $email; ?>" required>
+      </div>
+      <div>
+        <label for="pasword"></label>
+        <input type="text" placeholder="Password" id="password" name="password" value="<?php echo $password; ?>" required>
+      </div>
+      <div>
+        <label for="confirm_password"></label>
+        <input type="password" placeholder="Confirm Password" id="confirm_password" name="confirm_password" required>
+    </div>
 
 
 

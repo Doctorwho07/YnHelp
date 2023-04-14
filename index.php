@@ -14,6 +14,10 @@ if (sizeof($uri_explode) == 1) {
             include_once './public/views/login.php';
             break;
 
+        case "user" :
+            include_once './public/views/user.php';
+            break;
+
         case "aids":
             $aids = $articleController->getAids();
             include_once "./public/views/aids.php";

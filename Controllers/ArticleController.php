@@ -61,7 +61,8 @@ class ArticleController
             ->setTitle($array["titre"])
             ->setResume($array["resume"])
             ->setDescription($array["description"])
-            ->setOrganizationType($this->convertArrayInOrganizationType($array));
+            ->setOrganizationType($this->convertArrayInOrganizationType($array))
+            ->setPictureName($array["picture_name"]);
         return $article;
     }
 

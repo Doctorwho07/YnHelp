@@ -19,6 +19,8 @@ body {
 
 h1 {
   margin: 10px;
+  font-size: 2em;
+  color: #ffffff;
 }
 
 h3 {
@@ -35,6 +37,12 @@ h5 {
   letter-spacing: 2px;
 }
 
+span {
+  font-family: "quantum", sans-serif;
+  font-size: 3em;
+  color: #00bafb;
+}
+
 .background {
   background-image: url(../assets/background.png);
   background-repeat: no-repeat;
@@ -47,7 +55,7 @@ h5 {
 }
 
 .container {
-  width: 100vw;
+  width: 99vw;
   height: 100vh;
   left: 0;
   display: flex;
@@ -81,21 +89,15 @@ h5 {
   display: flex;
   flex-direction: column;
   align-content: center;
-  background-color: rgba(98, 111, 111, 0.64);
-  width: 15vw;
+  background-color: #8562f9;
+  width: 19vw;
   text-transform: uppercase;
-}
-
-.member img {
-  width: 10vw;
-  height: 10vw;
-  border-radius: 25px;
-  align-self: center;
-  margin: 1%;
+  align-items: center;
+  padding: 2%;
 }
 
 .alexis {
-  background-image: url(../assets/background.png);
+  background-image: url(../assets/alexis.jpeg);
 }
 .thomas {
   background-image: url(../assets/ThomasCHAD.png);
@@ -104,7 +106,7 @@ h5 {
   background-image: url(../assets/ozlem.jpg);
 }
 .johan {
-  background-image: url(../assets/johan.png);
+  background-image: url(../assets/johan.jpg);
 }
 .chouaib {
   background-image: url(../assets/chouaib.jpg);
@@ -121,4 +123,22 @@ h5 {
 .robin {
   background-repeat: no-repeat;
   background-size: cover;
+  width: 25vh;
+  height: 25vh;
+  background-position: center;
+  border-radius: 50%;
+  margin: 2%;
+}
+
+.footer {
+  width: 100%;
+  height: 5vh;
+  background: #00000079;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+p {
+  color: #ffffff;
 }

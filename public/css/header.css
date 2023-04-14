@@ -34,26 +34,41 @@ a:hover {
   height: 9vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: center;
   position: fixed;
-}
-
-a img {
-  width: 10vh;
-  height: 10vh;
 }
 
 .back {
   display: flex;
   justify-content: center;
   align-items: center;
+  left: 0;
+  width: 10vw;
+  margin-left: 2vw;
+  margin-right: 5vw;
+}
+
+.back h3 {
+  color: #00bafb;
+  font-size: 1.6em;
+}
+
+.back img {
+  width: 7vw;
+  height: 7vw;
 }
 
 .search {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 50vw;
+  font-size: 1em;
+}
+
+.search img {
+  width: 3vh;
+  height: 3vh;
 }
 
 .search:hover {
@@ -64,20 +79,27 @@ a img {
 }
 
 .link {
-  width: 25vw;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  margin-right: 2vw;
+  justify-content: space-around;
+  width: 15vw;
+  font-size: 0.8em;
 }
 
 .login {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 10vw;
+  right: 0;
 }
 
 .login img {
-  width: 7vh;
-  height: 7vh;
+  width: 5vh;
+  height: 5vh;
+  margin-right: 1vw;
+}
+
+.pipe {
+  font-size: 24px;
 }

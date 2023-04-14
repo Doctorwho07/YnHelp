@@ -7,12 +7,19 @@ $uri_explode = explode("/", trim($uri, "/"));
 $articleController = new ArticleController();
 
 if (sizeof($uri_explode) == 1) {
-    $aids = $articleController->getAids();
-    include_once './public/views/aids.php';
-} elseif ($uri_explode[1] == "login") {
-    include_once './public/views/login.php';
-} elseif ($uri_explode[1] == "aids") {
     include_once './public/views/home.php';
-    include_once "./public/views/aids.php";
+} else {
+    switch ($uri_explode[1]) {
+        case "login":
+            include_once './public/views/login.php';
+            break;
+
+        case "aids":
+            $aids = $articleController->getAids();
+            include_once "./public/views/aids.php";
+
+        default:
+            include_once './public/views/home.php';
+            break;
+    }
 }
-?>

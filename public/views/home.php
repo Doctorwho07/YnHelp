@@ -16,8 +16,9 @@
     <h1>YnHelp</h1>
     </div>
     <div class="presentation">
-    <h5>Bienvenue sur notre site dédié aux aides et associations destinées à soutenir les étudiants. Nous sommes conscients que la vie étudiante peut être difficile et remplie de défis, c'est pourquoi nous avons rassemblé ici des informations sur les différentes ressources qui sont à votre disposition. Que vous ayez besoin d'aide financière, de soutien psychologique ou d'orientation professionnelle, nous sommes là pour vous aider à trouver les ressources dont vous avez besoin pour réussir et atteindre vos objectifs académiques et personnels. Notre objectif est de vous offrir les informations les plus à jour et pertinentes sur les aides et associations disponibles, afin que vous puissiez prendre des décisions éclairées et avoir accès à tous les outils dont vous avez besoin pour réussir dans vos études.</h5>    </div>
-<section>
+    <h5>Notre site est dédié aux aides et associations pour soutenir les étudiants. Nous sommes là pour vous aider à trouver les ressources dont vous avez besoin, que ce soit pour de l'aide financière, du soutien psychologique ou de l'orientation professionnelle. Nous offrons des informations à jour sur les différentes ressources disponibles afin que vous puissiez prendre des décisions éclairées pour réussir dans vos études et atteindre vos objectifs académiques et personnels.</h5>    </div>
+
+    </div>    <section>
     <div class="equipe">
         <h1>L'équipe</h1>
     </div>
@@ -49,7 +50,7 @@
     </div>
 </div>
 </section>
-</div>
+
 </body>
 <?php require './public/templates/footer.html'; ?>
 </html>

@@ -20,8 +20,8 @@ h5 {
 .background {
   background-image: url(../assets/background.png);
   background-repeat: no-repeat;
-
-  background-size: cover;
+  background-size: cover; /* Ajouté pour adapter l'image à la taille de la page */
+  background-position: center; /* Ajouté pour centrer l'image */
   width: 100vw;
   height: 91vh;
   top: 10vh;

@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <title>YnHelp</title>
     <link rel="stylesheet" href="./public/css/home.css" />
-<<<<<<< HEAD
-=======
     <link rel="stylesheet" href="./public/css/header.css" />
     <link rel="stylesheet" href="./public/css/footer.css" />
 
->>>>>>> bf80c0bd33607de6cd1058ebc02fac9586dad8f9
 </head>
 <body>
 <?php require './public/templates/header.html'; ?>

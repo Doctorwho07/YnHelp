@@ -1,20 +1,12 @@
 @font-face {
-  font-family: "quantumregular";
-  src: url(../assets/webfontkit-20230414-035239/quantum-webfont.woff2)
-      format("woff2"),
-    url(../assets/webfontkit-20230414-035239/quantum-webfont.woff)
-      format("woff");
+  font-family: "quantum";
+  src: url("../assets/quantum-webfont.woff2") format("woff2");
 }
 
 * {
   border: 0;
   padding: 0;
-  font-family: "quantumregular", "quantum", sans-serif;
-}
-
-@font-face {
-  font-family: "quantum";
-  src: url(../assets/Quantum.ttf);
+  font-family: sans-serif;
 }
 
 html {
@@ -25,8 +17,13 @@ body {
   text-align: center;
 }
 
-h1 {
-  font-family: "quantumregular", "quantum", sans-serif;
+h3 {
+  font-size: 1.2em;
+}
+
+h1,
+h3 {
+  font-family: "quantum", sans-serif;
 }
 
 h5 {

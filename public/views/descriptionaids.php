@@ -9,13 +9,12 @@
   <body>
   <?php require './public/templates/header.html'; ?>
   <div class="article"> <h1>
-     <p><?= $aid->getTitle(); ?></p>
+     <p><?= $aid->getTitle(); ?></p></h1>
     <img src="../public/assets/caf.png" alt="caf.pnj">
     <p><?= $aid->getDescription(); ?></p>
-    
     <p><a href="https://www.google.com/"target="_blank">Source</a></p>
   </div>
-  </h1>
+  
   
   </body>
 </html>

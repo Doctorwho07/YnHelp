@@ -18,7 +18,7 @@
                             <p class="card-description"><?= $aid->getDescription() ?></p>
                             <div class="card-image-container">
                         <?php   
-                            $pictureName = $aid->getPictureName() == "" ? "./public/assets/default-user.jpg" : $aid->getPictureName() 
+                            $pictureName = $aid->getPictureName() == "" ? "default-user.jpg" : $aid->getPictureName() 
                         ?>
                             <img class="card-picture" src="./public/assets/<?= $pictureName ?>" alt="Image de l'article">
                             </div>

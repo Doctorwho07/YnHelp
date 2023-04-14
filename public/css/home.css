@@ -22,7 +22,8 @@ h3 {
 }
 
 h1,
-h3 {
+h3,
+a {
   font-family: "quantum", sans-serif;
 }
 

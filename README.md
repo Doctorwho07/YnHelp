@@ -1,3 +1,12 @@
+Comment faire run le projet ?
+  - Avoir xampp déjà
+  - Git clone notre projet dans un dossier dans xampp/htdocs
+  - Lancer Apache et MySQL via Xampp
+  - Créer la db ynhelp (dans mysql)
+  - Importer le fichier ynhelp.sql dans la db ynhelp créée juste avant
+  - lancé Apache puis sélectionner le dossier YnHelp ou comment vous l'avez appeler
+
+
 # YnHelp
 Welcome to our website dedicated to resources and associations aimed at supporting students. We understand that student life can be difficult and filled with challenges, which is why we have gathered information on the various resources available to you. Whether you need financial assistance, psychological support, or career guidance, we are here to help you find the resources you need to succeed and achieve your academic and personal goals. Our goal is to provide you with the most up-to-date and relevant information on available resources and associations so that you can make informed decisions and have access to all the tools you need to succeed in your studies..
 

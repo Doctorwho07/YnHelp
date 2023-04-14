@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,3 +17,6 @@
 	</form>
 </body>
 </html>
+=======
+<h1>TEST</h1>
+>>>>>>> f2f9ba9689ef6847f1f65cba109bbe42f68fb27c

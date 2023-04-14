@@ -30,7 +30,7 @@ class ArticleController
 
         $output = array();
         foreach ($results as $result) {
-            $output = $this->convertArrayInArticle($result);
+            $output[] = $this->convertArrayInArticle($result);
         }
         return $output;
     }

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="../public/css/login.css">
-
+	<link rel="stylesheet" href="./public/css/login.css" />
 	<title>Page de connexion</title>
 </head>
 <body>

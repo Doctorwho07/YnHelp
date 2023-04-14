@@ -12,5 +12,7 @@
     hello
 </div>
 <img src="../assets/background.png" alt="background">
+
+<a href="/YnHelp/login">login</a>
 </body>
 </html>

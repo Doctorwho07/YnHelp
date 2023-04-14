@@ -17,6 +17,7 @@ if (sizeof($uri_explode) == 1) {
         case "aids":
             $aids = $articleController->getAids();
             include_once "./public/views/aids.php";
+            break;
 
         default:
             include_once './public/views/home.php';
